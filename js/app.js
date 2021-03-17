@@ -147,7 +147,7 @@ alert('Lets see if you can guess my lucky number, you have only four attempts. (
 let i;
 for (i=0 ; i<4; i++)
 {
-  let guess= prompt('Guess my lucky number');
+  let guess= Number(prompt('Guess my lucky number'));
   if (guess === number)
   {
     alert('your answer is correct!');
