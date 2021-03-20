@@ -10,7 +10,11 @@ let gender = prompt('Whats your gender (f/m) ?');
 switch (gender){
 case 'f': alert('Welcome Miss.'+ Name+' to my Biography web page! It is wonderful meeting you !');
   break;
+  case 'female': alert('Welcome Miss.'+ Name+' to my Biography web page! It is wonderful meeting you !');
+  break;
 case 'm':alert('Welcome Mr.'+ Name+' to my Biography web page! It is wonderful meeting you !');
+  break;
+  case 'male':alert('Welcome Mr.'+ Name+' to my Biography web page! It is wonderful meeting you !');
   break;
 default: prompt('Whats your gender - only answer with (f/m) ?');
   console.log(gender);
@@ -18,18 +22,17 @@ default: prompt('Whats your gender - only answer with (f/m) ?');
 }
 
 let score = 0;
-function Q1(){
+
 //  **first question**  //
+function Q1(){
   let age=prompt ('Am I 22 years old?');
-
-
-  if ( age .toLowerCase()=== 'yes')
+  if ( age .toLowerCase()=== 'yes' || age .toLowerCase()==='y')
   {
   // console.log('Your answer is right');
     alert('You are right I am 22 years old !');
     score = score+1;
   }
-  else if (age .toLowerCase()=== 'no')
+  else if (age .toLowerCase()=== 'no' || age .toLowerCase()==='n')
   {
   // console.log('Your answer is wrong');
     alert('Your answer is wrong');
@@ -44,16 +47,17 @@ function Q1(){
 }
 Q1();
 
-function Q2(){
+
 //  **second question**  //
+function Q2(){
   let place=prompt('Do you think I live in Turkey?');
   console.log(place);
-  if (place .toLowerCase()=== 'yes')
+  if (place .toLowerCase()=== 'yes' || place .toLocaleLowerCase()==='y')
   {
   // console.log('Your answer is wrong');
     alert('Your answer is wrong');
   }
-  else if (place .toLowerCase()=== 'no')
+  else if (place .toLowerCase()=== 'no' || place.toLowerCase()==='n')
   {
   // console.log('you are right');
     alert('You are right !');
@@ -70,17 +74,16 @@ Q2();
 
 
 
-
-function Q3(){
 //  **third question**  //
+function Q3(){
   let role=prompt('Do you think I am a doctor ?');
   console.log(role);
-  if (role .toLowerCase()=== 'yes')
+  if (role .toLowerCase()=== 'yes' || role .toLowerCase()==='y')
   {
   // console.log('Your answer is wrong.');
     alert('Your answer is wrong.');
   }
-  else if (role .toLowerCase()=== 'no')
+  else if (role .toLowerCase()=== 'no'|| role .toLowerCase()==='n')
   {
   // console.log('your answer is right.');
     alert('You are right!');
@@ -96,17 +99,19 @@ function Q3(){
 }
 Q3();
 
-function Q4(){
+
+
 //  **fourth question** //
+function Q4(){
   let sign= prompt('Do you think I am a taurus?');
   console.log(sign);
-  if (sign .toLowerCase()=== 'yes')
+  if (sign .toLowerCase()=== 'yes' || sign .toLowerCase()==='y')
   {
   // console.log('You are right!');
     alert('You are right!');
     score=score+1;
   }
-  else if (sign .toLowerCase()=== 'no')
+  else if (sign .toLowerCase()=== 'no'|| sign .toLowerCase()==='n')
   {
     //  console.log('your answer is wrong ');
     alert('your answer is wrong ');
@@ -120,17 +125,18 @@ function Q4(){
 }
 Q4();
 
+
+// **fifth question** //
 function Q5(){
-// fifth question
   let edu= prompt('Have I studied in the Hashemite university?');
   console.log(edu);
-  if (edu .toLowerCase()=== 'yes')
+  if (edu .toLowerCase()=== 'yes'|| edu .toLowerCase()=== 'y' )
   {
   // console.log('You are right!');
     alert('You are right!');
     score = score+1;
   }
-  else if (edu .toLowerCase()=== 'no')
+  else if (edu .toLowerCase()=== 'no'|| edu .toLowerCase()=== 'n')
   {
   // console.log('your answer answer is wrong.');
     alert('your answer answer is wrong.');
@@ -145,9 +151,8 @@ function Q5(){
 Q5();
 
 
-
-function Q6(){
 // **sixth question** //
+function Q6(){
   let number = 9;
   alert('Lets see if you can guess my lucky number, you have only four attempts. (I will give you some hints.)');
 
@@ -179,10 +184,10 @@ function Q6(){
 Q6();
 
 
-function Q7(){
-//  **seventh question**  //
 
-  let singers=['adele','rihanna','pink','maraiah', 'beyonce', 'mariah', 'christina', 'britney', 'gaga' ];
+//  **seventh question**  //
+function Q7(){
+ let singers=['adele','rihanna','pink','maraiah', 'beyonce', 'mariah', 'christina', 'britney', 'gaga' ];
   alert('You have six attempts to guess my favorite female singer. lets go');
 
   for(let i=0; i<6; i++)
